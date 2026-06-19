@@ -1,0 +1,53 @@
+{
+  "name": "Profissão do Futuro - Gestor de Agentes de IA",
+  "short_name": "Profissão Futuro",
+  "description": "A carreira que a IA não consegue substituir. Aprenda a criar e gerenciar agentes inteligentes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00FFB3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["education", "business"],
+  "shortcuts": [
+    {
+      "name": "Ver Oferta",
+      "short_name": "Oferta",
+      "description": "Ir direto para a oferta do curso",
+      "url": "/#oferta",
+      "icons": [
+        {
+          "src": "/icon-192.jpg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
