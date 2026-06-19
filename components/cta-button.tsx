@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 
 export default function CtaButton({
   href = "#",
-  label = "Chamar para ação",
+  label = "Quero garantir a Mentoria 4D",
   className,
   onClick,
   external = false,
@@ -17,7 +17,6 @@ export default function CtaButton({
   external?: boolean
 }) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // Disparar evento do Facebook Pixel
     if (typeof window !== "undefined" && (window as any).fbq) {
       ;(window as any).fbq("track", "Lead")
     }
@@ -35,14 +34,14 @@ export default function CtaButton({
       {...props}
       onClick={handleClick}
       className={cn(
-        "block text-center font-semibold rounded-lg px-6 py-4 text-black",
-        "bg-[linear-gradient(90deg,#00FFB3,#00B3FF)]",
-        "shadow-[0_0_30px_-10px_rgba(0,255,179,0.6)]",
-        "hover:brightness-110 active:brightness-95 transition-all",
-        "focus:outline-none focus:ring-2 focus:ring-emerald-300/70 focus:ring-offset-2 focus:ring-offset-black",
+        "block rounded-lg px-6 py-4 text-center font-semibold text-black",
+        "bg-[linear-gradient(135deg,#E0B17D,#D4A373)]",
+        "shadow-[0_0_30px_-10px_rgba(212,163,115,0.55)]",
+        "transition-all hover:brightness-105 active:brightness-95",
+        "focus:outline-none focus:ring-2 focus:ring-[#D4A373]/70 focus:ring-offset-2 focus:ring-offset-black",
         className,
       )}
-      style={{ fontFamily: "var(--font-poppins)" }}
+      style={{ fontFamily: "Inter, sans-serif" }}
     >
       {label}
     </a>

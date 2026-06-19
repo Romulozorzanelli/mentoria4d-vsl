@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
-import { Sparkles, Loader2, AlertCircle } from "lucide-react"
+import { AlertCircle, Loader2, Sparkles } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 const WEBHOOK_URL = "https://nwh.romuloautomacoes.com.br/webhook/7a59bdea-3b47-4386-8425-0bececa79949"
@@ -37,7 +37,6 @@ export default function CapturaForm() {
         throw new Error("Erro ao enviar dados")
       }
 
-      // Redirecionar para página de obrigado
       router.push("/obrigado")
     } catch (err) {
       setError("Erro ao enviar seus dados. Tente novamente.")
@@ -50,32 +49,26 @@ export default function CapturaForm() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <Sparkles className="text-emerald-400" size={24} />
-            <h1
-              className="text-3xl md:text-4xl font-bold text-emerald-400"
-              style={{ fontFamily: "var(--font-orbitron)" }}
-            >
-              Bem-vindo(a)!
+        <div className="mb-8 text-center">
+          <div className="mb-4 inline-flex items-center gap-2">
+            <Sparkles className="text-[#D4A373]" size={24} />
+            <h1 className="text-3xl font-bold text-white md:text-4xl" style={{ fontFamily: "Montserrat, sans-serif" }}>
+              Bem-vindo
             </h1>
           </div>
-          <p className="text-zinc-300 text-lg mb-3">Preencha seus dados para acessar o grupo exclusivo do WhatsApp</p>
-          <div className="inline-block bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-400/30 rounded-lg px-4 py-3">
-            <p className="text-emerald-300 font-medium text-sm">
-              ✨ Você está a um passo para descobrir a profissão do futuro
+          <p className="mb-3 text-lg text-zinc-300">Preencha seus dados para seguir para a Mentoria 4D.</p>
+          <div className="inline-block rounded-lg border border-[#D4A373]/30 bg-[#D4A373]/10 px-4 py-3">
+            <p className="text-sm font-medium text-[#D4A373]">
+              Você está a um passo de acessar as instruções da Mentoria 4D.
             </p>
           </div>
         </div>
 
-        {/* Form Card */}
-        <div className="bg-zinc-900/60 border border-emerald-400/30 rounded-xl p-6 md:p-8 shadow-[0_0_50px_-16px_rgba(0,255,179,0.35)]">
+        <div className="rounded-xl border border-white/10 bg-white/5 p-6 shadow-[0_0_50px_-16px_rgba(212,163,115,0.2)] md:p-8">
           <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Nome */}
             <div>
-              <label htmlFor="nome" className="block text-sm font-medium text-zinc-300 mb-2">
-                Nome Completo
+              <label htmlFor="nome" className="mb-2 block text-sm font-medium text-zinc-300">
+                Nome completo
               </label>
               <input
                 type="text"
@@ -84,13 +77,12 @@ export default function CapturaForm() {
                 required
                 autoComplete="name"
                 placeholder="João Silva"
-                className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 focus:border-emerald-400 transition-all"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900/70 px-4 py-3 text-white placeholder:text-zinc-500 focus:border-[#D4A373] focus:outline-none focus:ring-2 focus:ring-[#D4A373]/40"
               />
             </div>
 
-            {/* WhatsApp */}
             <div>
-              <label htmlFor="whatsapp" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor="whatsapp" className="mb-2 block text-sm font-medium text-zinc-300">
                 WhatsApp (com DDD)
               </label>
               <input
@@ -100,9 +92,8 @@ export default function CapturaForm() {
                 required
                 autoComplete="tel"
                 placeholder="(11) 98765-4321"
-                pattern="[$$\d{2}$$\s\d{4,5}-\d{4}]*"
                 maxLength={15}
-                className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 focus:border-emerald-400 transition-all"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900/70 px-4 py-3 text-white placeholder:text-zinc-500 focus:border-[#D4A373] focus:outline-none focus:ring-2 focus:ring-[#D4A373]/40"
                 onInput={(e) => {
                   const input = e.currentTarget
                   let value = input.value.replace(/\D/g, "")
@@ -120,12 +111,10 @@ export default function CapturaForm() {
                   input.value = value
                 }}
               />
-              <p className="text-xs text-zinc-500 mt-1">Formato: (11) 98765-4321</p>
             </div>
 
-            {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
+              <label htmlFor="email" className="mb-2 block text-sm font-medium text-zinc-300">
                 E-mail
               </label>
               <input
@@ -135,23 +124,21 @@ export default function CapturaForm() {
                 required
                 autoComplete="email"
                 placeholder="seu@email.com"
-                className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 focus:border-emerald-400 transition-all"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900/70 px-4 py-3 text-white placeholder:text-zinc-500 focus:border-[#D4A373] focus:outline-none focus:ring-2 focus:ring-[#D4A373]/40"
               />
             </div>
 
-            {/* Error Message */}
             {error && (
-              <div className="flex items-center gap-2 p-3 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+              <div className="flex items-center gap-2 rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-300">
                 <AlertCircle size={16} />
                 <span>{error}</span>
               </div>
             )}
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 text-black font-semibold py-3.5 rounded-lg hover:brightness-110 active:brightness-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-[linear-gradient(135deg,#E0B17D,#D4A373)] py-3.5 font-semibold text-black transition-all hover:brightness-105 active:brightness-95 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? (
                 <>
@@ -167,77 +154,9 @@ export default function CapturaForm() {
             </button>
           </form>
 
-          {/* Privacy Note */}
-          <p className="text-xs text-zinc-500 text-center mt-6">
-            🔒 Seus dados estão seguros e não serão compartilhados com terceiros
+          <p className="mt-6 text-center text-xs text-zinc-500">
+            Seus dados estão seguros e não serão compartilhados com terceiros.
           </p>
-        </div>
-
-        {/* Promessa Principal */}
-        <div className="mt-6 text-center">
-          <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border-2 border-emerald-400/50 rounded-xl p-6 shadow-[0_0_60px_-16px_rgba(0,255,179,0.4)]">
-            <h2
-              className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight"
-              style={{ fontFamily: "var(--font-orbitron)" }}
-            >
-              Fature de{" "}
-              <span className="text-emerald-400 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                R$ 5 mil a R$ 30 mil
-              </span>
-            </h2>
-            <p className="text-zinc-300 text-lg">
-              com a profissão que está <strong className="text-emerald-300">fora do radar</strong>
-            </p>
-          </div>
-        </div>
-
-        {/* O que você vai descobrir na Aula ao Vivo */}
-        <div className="mt-6 bg-zinc-900/60 border border-emerald-400/30 rounded-xl p-6 shadow-[0_0_40px_-12px_rgba(0,255,179,0.25)]">
-          <h3 className="text-xl font-bold text-emerald-300 mb-4 flex items-center gap-2">
-            <Sparkles size={20} />O que você vai descobrir na aula ao vivo:
-          </h3>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-emerald-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-              </div>
-              <span className="text-zinc-300 text-sm">
-                A <strong className="text-white">profissão do futuro</strong> que a IA não consegue substituir
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-emerald-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-              </div>
-              <span className="text-zinc-300 text-sm">
-                Como <strong className="text-white">começar do zero</strong> mesmo sem conhecimento técnico
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-emerald-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-              </div>
-              <span className="text-zinc-300 text-sm">
-                Os <strong className="text-white">3 passos práticos</strong> para criar seus primeiros agentes de IA
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-emerald-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-              </div>
-              <span className="text-zinc-300 text-sm">
-                Como <strong className="text-white">monetizar suas habilidades</strong> em menos de 30 dias
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-emerald-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-              </div>
-              <span className="text-zinc-300 text-sm">
-                Casos reais de quem já está <strong className="text-white">faturando de 5 a 30 mil por mês</strong>
-              </span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>

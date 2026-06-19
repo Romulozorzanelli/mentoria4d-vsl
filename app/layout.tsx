@@ -1,80 +1,74 @@
 import type React from "react"
-import { Orbitron, Poppins } from "next/font/google"
 import type { Metadata, Viewport } from "next"
 import Script from "next/script"
+import "@fontsource/inter/300.css"
+import "@fontsource/inter/400.css"
+import "@fontsource/inter/500.css"
+import "@fontsource/inter/600.css"
+import "@fontsource/inter/700.css"
+import "@fontsource/inter/800.css"
+import "@fontsource/montserrat/400.css"
+import "@fontsource/montserrat/700.css"
+import "@fontsource/montserrat/800.css"
+import "@fontsource/montserrat/900.css"
 import "./globals.css"
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-orbitron",
-  display: "swap",
-})
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
-})
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#00FFB3",
+  themeColor: "#D4A373",
 }
 
 export const metadata: Metadata = {
-  title: "Profissão do Futuro - A Carreira que a IA Não Consegue Substituir",
+  title: "Mentoria 4D | Oferta Especial",
   description:
-    "Descubra como se tornar um Gestor de Agentes de IA e construir uma carreira lucrativa na profissão do futuro. Acesso a 27 aulas práticas, comunidade exclusiva e suporte especializado.",
+    "Mentoria 4D com 85% de desconto nesta semana. Acesso de 1 ano, comunidade ativa e suporte direto para acelerar sua execução.",
   keywords: [
+    "mentoria",
+    "Mentoria 4D",
     "inteligência artificial",
-    "IA",
-    "carreira em IA",
-    "gestor de agentes",
-    "profissão do futuro",
     "automação",
-    "curso de IA",
+    "carreira digital",
+    "comunidade",
   ],
   authors: [{ name: "Rômulo" }],
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Profissão do Futuro",
+    title: "Mentoria 4D",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: "https://seu-dominio.com",
-    siteName: "Profissão do Futuro",
-    title: "Profissão do Futuro - Gestor de Agentes de IA",
+    siteName: "Mentoria 4D",
+    title: "Mentoria 4D | Oferta Especial",
     description:
-      "A carreira que a IA não consegue substituir. Aprenda a criar e gerenciar agentes inteligentes e construa uma profissão lucrativa no mercado de IA.",
+      "Essa semana a Mentoria 4D está com 85% de desconto. Acesso de 1 ano, comunidade ativa e suporte direto.",
     images: [
       {
         url: "https://lzairoviveybhcahkizs.supabase.co/storage/v1/object/public/imagens/romulo-perfil.jpg",
         width: 1200,
         height: 630,
-        alt: "Profissão do Futuro - Gestor de Agentes de IA",
+        alt: "Mentoria 4D",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Profissão do Futuro - Gestor de Agentes de IA",
+    title: "Mentoria 4D | Oferta Especial",
     description:
-      "A carreira que a IA não consegue substituir. Aprenda a criar agentes inteligentes e construa uma profissão lucrativa.",
+      "Essa semana a Mentoria 4D está com 85% de desconto. Acesso de 1 ano, comunidade ativa e suporte direto.",
     images: ["https://lzairoviveybhcahkizs.supabase.co/storage/v1/object/public/imagens/romulo-perfil.jpg"],
   },
   robots: {
     index: true,
     follow: true,
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 const META_PIXEL_ID = "1578784523492094"
@@ -91,11 +85,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192.jpg" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Profissão Futuro" />
+        <meta name="apple-mobile-web-app-title" content="Mentoria 4D" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=no" />
-
-        {/* Meta Pixel Code */}
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
@@ -124,7 +116,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className={`${orbitron.variable} ${poppins.variable} antialiased bg-black text-white min-h-screen`}>
+      <body className="antialiased bg-black text-white min-h-screen">
         {children}
       </body>
     </html>

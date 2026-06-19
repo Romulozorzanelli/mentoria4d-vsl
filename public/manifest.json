@@ -1,11 +1,11 @@
 {
-  "name": "Profissão do Futuro - Gestor de Agentes de IA",
-  "short_name": "Profissão Futuro",
-  "description": "A carreira que a IA não consegue substituir. Aprenda a criar e gerenciar agentes inteligentes.",
+  "name": "Mentoria 4D",
+  "short_name": "Mentoria 4D",
+  "description": "Mentoria 4D com 85% de desconto, acesso de 1 ano, comunidade ativa e suporte direto.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#00FFB3",
+  "background_color": "#050505",
+  "theme_color": "#D4A373",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -40,7 +40,7 @@
     {
       "name": "Ver Oferta",
       "short_name": "Oferta",
-      "description": "Ir direto para a oferta do curso",
+      "description": "Ir direto para a oferta da Mentoria 4D",
       "url": "/#oferta",
       "icons": [
         {
