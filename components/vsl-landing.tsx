@@ -16,27 +16,27 @@ const SCARCITY_SECONDS_DEFAULT = 15 * 60
 
 const MODULES = [
   {
-    title: "Módulo 1 — Introdução e Conexões Iniciais",
+    title: "Módulo 1 Introdução e Conexões Iniciais",
     badge: "Essencial",
     desc: "Aviso importante, a aula mais importante da Mentoria 4D, introdução ao mundo das automações, criação de conta no ChatbotSystem, conexão com GPT, ElevenLabs, Instagram e WhatsApp (QR Code e Oficial), criação do primeiro bot.",
   },
   {
-    title: "Módulo 2 — Criando seu Primeiro Chatbot",
+    title: "Módulo 2 Criando seu Primeiro Chatbot",
     badge: "Fluxos",
     desc: "Estrutura ROMEU SDR, criação de variáveis e assistentes para Instagram, fluxo de conversa, looping lógico, follow-up automático, Reply Agent e fluxo de agendamento.",
   },
   {
-    title: "Módulo 3 — Funções Avançadas",
+    title: "Módulo 3 Funções Avançadas",
     badge: "Avançado",
     desc: "Integrações avançadas, incluindo Kiwify e outras plataformas.",
   },
   {
-    title: "Bônus — Lives Gravadas (+20 lives)",
+    title: "Bônus Lives Gravadas (+20 lives)",
     badge: "+20 lives",
     desc: "Acesso a mais de 20 lives gravadas sobre CRM com IA para WhatsApp e Instagram, chatbot completo com IA, geração de imagens com IA durante conversa, agendamento, posicionamento digital, prospecção com o ROMEU, tira-dúvidas e muito mais. Conteúdo atualizado regularmente.",
   },
   {
-    title: "Bônus — Recursos Adicionais",
+    title: "Bônus Recursos Adicionais",
     badge: "Recursos",
     desc: "Integração com API de CEP, notificações de ações de usuário, informar data atual para o agente de IA, implementação completa do ROMEU com aluno, fluxo degustação e suporte ao vivo.",
   },
@@ -44,7 +44,7 @@ const MODULES = [
 
 const TESTIMONIALS = [
   {
-    title: "Vitor — 5 clientes grandes após a mentoria",
+    title: "Vitor 5 clientes grandes após a mentoria",
     img: "https://romulozorzanelli.vercel.app/images/depoimento_vitor.jpg",
     alt: "Depoimento do Vitor sobre 5 clientes grandes após a mentoria",
     quote:
@@ -52,7 +52,7 @@ const TESTIMONIALS = [
     note: "5 clientes grandes, equipe construída e suporte em operação",
   },
   {
-    title: "Luan — Agência de IA e recorrência em pouco tempo",
+    title: "Luan Agência de IA e recorrência em pouco tempo",
     img: "https://romulozorzanelli.vercel.app/images/depoimento_luan.png",
     alt: "Depoimento do Luan sobre agência de IA e recorrência",
     quote:
@@ -60,14 +60,14 @@ const TESTIMONIALS = [
     note: "Primeiro cliente e recorrência em pouco tempo",
   },
   {
-    title: "Sergio — R$ 3.254 faturados em fevereiro",
+    title: "Sergio R$ 3.254 faturados em fevereiro",
     img: "https://romulozorzanelli.vercel.app/images/depoimento_sergio_3254.png",
     alt: "Comprovante de faturamento do Sergio no valor de R$ 3.254",
     quote: "Abrimos fevereiro 🚀",
     note: "R$ 3.254 faturados em fevereiro",
   },
   {
-    title: "Marcelo — R$ 2.391 em pagamentos a receber",
+    title: "Marcelo R$ 2.391 em pagamentos a receber",
     img: "https://romulozorzanelli.vercel.app/images/depoimento_marcelo_2391.png",
     alt: "Comprovante do Marcelo com R$ 2.391 em pagamentos a receber",
     quote: "Quando a gente corre com quem sabe correr… Os resultados vêm.",
@@ -159,7 +159,7 @@ export default function VslLanding({
               Mentoria 4D
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-zinc-300 md:text-xl">
-              Essa semana a Mentoria 4D está com 85% de desconto. De R$ 1.200,00 por R$ 197,00 — acesso de 1 ano,
+              Essa semana a Mentoria 4D está com 85% de desconto. De R$ 1.200,00 por R$ 197,00 acesso de 1 ano,
               comunidade ativa e suporte direto.
             </p>
           </header>
@@ -172,57 +172,6 @@ export default function VslLanding({
               >
                 A Metodologia que Transforma IA em Vendas Automáticas
               </h2>
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-5xl px-4 py-6 md:px-6 md:py-10">
-          <div className="rounded-xl border border-[#D4A373]/30 bg-zinc-900/60 p-4 shadow-[0_0_40px_-12px_rgba(212,163,115,0.18)] md:p-6">
-            <div className="flex flex-col items-center gap-6 md:flex-row">
-              <div className="flex-shrink-0">
-                <img
-                  src="https://romulozorzanelli.vercel.app/images/romulo-portrait.jpg"
-                  alt="Rômulo Zorzanelli"
-                  className="h-32 w-32 rounded-full border-2 border-[#D4A373]/50 object-cover shadow-[0_0_30px_-10px_rgba(212,163,115,0.35)] md:h-40 md:w-40"
-                />
-              </div>
-
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="mb-2 text-2xl font-bold text-[#D4A373]" style={{ fontFamily: "Montserrat, sans-serif" }}>
-                  Sobre o Mentor
-                </h3>
-                <p className="mb-4 text-sm text-zinc-300 md:text-base">
-                  Fundador da Zone Digital e criador do ZD Agent. Especialista em automações com IA e processos
-                  inteligentes, com mais de 7 anos de experiência prática. Já criou SaaS, formou mais de 40 alunos
-                  e ajudou empresas a escalar com tecnologia acessível. Habilidades: GPT, Make, n8n, Manychat,
-                  APIs, CRMs, Supabase e Power BI.
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 text-sm md:grid-cols-3">
-                  <div className="rounded-lg border border-[#D4A373]/20 bg-zinc-800/50 p-3">
-                    <div className="text-lg font-bold text-[#D4A373]">7+ anos</div>
-                    <div className="text-xs text-zinc-400">de experiência</div>
-                  </div>
-                  <div className="rounded-lg border border-[#D4A373]/20 bg-zinc-800/50 p-3">
-                    <div className="text-lg font-bold text-[#D4A373]">+40</div>
-                    <div className="text-xs text-zinc-400">mentorados</div>
-                  </div>
-                  <div className="col-span-2 rounded-lg border border-[#D4A373]/20 bg-zinc-800/50 p-3 md:col-span-1">
-                    <div className="text-base font-bold text-[#D4A373]">ZD Agent</div>
-                    <div className="text-xs text-zinc-400">SaaS próprio</div>
-                  </div>
-                </div>
-
-                <div className="mt-3 rounded-lg border border-[#D4A373]/30 bg-gradient-to-r from-[#D4A373]/15 to-black/20 p-3">
-                  <div className="flex items-center justify-center gap-2 md:justify-start">
-                    <Sparkles size={16} className="text-[#D4A373]" />
-                    <span className="font-semibold text-[#D4A373]">Rômulo Zorzanelli</span>
-                  </div>
-                  <p className="mt-1 text-xs text-zinc-400">
-                    GPT, Make, n8n, Manychat, APIs, CRMs, Supabase e Power BI
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -386,16 +335,6 @@ export default function VslLanding({
             ))}
           </div>
 
-          <div className="mx-auto mt-8 grid max-w-2xl gap-4 text-center md:grid-cols-2">
-            <div className="rounded-lg border border-[#D4A373]/20 bg-zinc-900/40 p-4">
-              <div className="text-2xl font-bold text-[#D4A373]">4.9/5</div>
-              <div className="text-sm text-zinc-400">Avaliação Média</div>
-            </div>
-            <div className="rounded-lg border border-[#D4A373]/20 bg-zinc-900/40 p-4">
-              <div className="text-2xl font-bold text-[#D4A373]">4 histórias reais</div>
-              <div className="text-sm text-zinc-400">Prova Social</div>
-            </div>
-          </div>
         </section>
 
         <section id="oferta" className="mx-auto max-w-4xl scroll-mt-20 px-4 py-6 md:px-6 md:py-12">
@@ -411,7 +350,7 @@ export default function VslLanding({
           <div className="mx-auto max-w-3xl">
             <div className="rounded-xl border border-[#D4A373]/40 bg-gradient-to-br from-[#D4A373]/15 to-black/30 p-4">
               <p className="mb-4 text-center text-sm leading-relaxed text-zinc-200 md:text-base">
-                Essa semana a Mentoria 4D está com 85% de desconto. De R$ 1.200,00 por R$ 197,00 — acesso de 1 ano,
+                Essa semana a Mentoria 4D está com 85% de desconto. De R$ 1.200,00 por R$ 197,00 acesso de 1 ano,
                 comunidade ativa e suporte direto.
               </p>
 
@@ -441,7 +380,7 @@ export default function VslLanding({
                       </div>
                     </div>
                     <div className="pt-2 border-t border-zinc-700">
-                      <div className="text-xs text-zinc-400">De R$ 1.200,00 por R$ 197,00 — 85% OFF</div>
+                      <div className="text-xs text-zinc-400">De R$ 1.200,00 por R$ 197,00 85% OFF</div>
                     </div>
                   </div>
                 </div>
@@ -491,6 +430,57 @@ export default function VslLanding({
               className="mx-auto w-full text-lg py-5 px-10 md:w-auto"
             />
             <p className="mt-2 text-xs text-zinc-500">Oferta promocional por tempo limitado</p>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-5xl px-4 py-6 md:px-6 md:py-10">
+          <div className="rounded-xl border border-[#D4A373]/30 bg-zinc-900/60 p-4 shadow-[0_0_40px_-12px_rgba(212,163,115,0.18)] md:p-6">
+            <div className="flex flex-col items-center gap-6 md:flex-row">
+              <div className="flex-shrink-0">
+                <img
+                  src="https://romulozorzanelli.vercel.app/images/romulo-portrait.jpg"
+                  alt="Rômulo Zorzanelli"
+                  className="h-32 w-32 rounded-full border-2 border-[#D4A373]/50 object-cover shadow-[0_0_30px_-10px_rgba(212,163,115,0.35)] md:h-40 md:w-40"
+                />
+              </div>
+
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="mb-2 text-2xl font-bold text-[#D4A373]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                  Sobre o Mentor
+                </h3>
+                <p className="mb-4 text-sm text-zinc-300 md:text-base">
+                  Fundador da Zone Digital e criador do ZD Agent. Especialista em automações com IA e processos
+                  inteligentes, com mais de 7 anos de experiência prática. Já criou SaaS, formou mais de 40 alunos
+                  e ajudou empresas a escalar com tecnologia acessível. Habilidades: GPT, Make, n8n, Manychat,
+                  APIs, CRMs, Supabase e Power BI.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 text-sm md:grid-cols-3">
+                  <div className="rounded-lg border border-[#D4A373]/20 bg-zinc-800/50 p-3">
+                    <div className="text-lg font-bold text-[#D4A373]">7+ anos</div>
+                    <div className="text-xs text-zinc-400">de experiência</div>
+                  </div>
+                  <div className="rounded-lg border border-[#D4A373]/20 bg-zinc-800/50 p-3">
+                    <div className="text-lg font-bold text-[#D4A373]">+40</div>
+                    <div className="text-xs text-zinc-400">mentorados</div>
+                  </div>
+                  <div className="col-span-2 rounded-lg border border-[#D4A373]/20 bg-zinc-800/50 p-3 md:col-span-1">
+                    <div className="text-base font-bold text-[#D4A373]">ZD Agent</div>
+                    <div className="text-xs text-zinc-400">SaaS próprio</div>
+                  </div>
+                </div>
+
+                <div className="mt-3 rounded-lg border border-[#D4A373]/30 bg-gradient-to-r from-[#D4A373]/15 to-black/20 p-3">
+                  <div className="flex items-center justify-center gap-2 md:justify-start">
+                    <Sparkles size={16} className="text-[#D4A373]" />
+                    <span className="font-semibold text-[#D4A373]">Rômulo Zorzanelli</span>
+                  </div>
+                  <p className="mt-1 text-xs text-zinc-400">
+                    GPT, Make, n8n, Manychat, APIs, CRMs, Supabase e Power BI
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
